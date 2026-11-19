@@ -3,7 +3,7 @@
 
 provider "registry.terraform.io/nomatronio/nomatron" {
   version     = "0.6.10"
-  constraints = ">= 0.6.10, < 0.7"
+  constraints = ">= 0.6.10, < 0.7.0"
   hashes = [
     "h1:xUVSO6YxEQqtUvAnkVwiJtCGWgfdhNT1AGqDccrjCyQ=",
     "zh:64e137f35989048f6ab71e230eff8f34e0ee303207d7420311a8a5d6515af9ad",
