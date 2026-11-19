@@ -4,7 +4,7 @@ terraform {
   required_providers {
     nomatron = {
       source  = "nomatronio/nomatron"
-      version = "~> 0.6"
+      version = ">= 0.6.10, < 0.7"
     }
   }
 }

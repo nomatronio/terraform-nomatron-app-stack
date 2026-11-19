@@ -74,7 +74,7 @@ module "app_stack" {
 }
 ```
 
-The root configuration must declare the `nomatronio/nomatron` provider at `~> 0.6` and configure it with an API address and token. The module does not configure a provider. Set secrets through a sensitive root variable and pass them to the module's `value_wo`; do not put secret values in ordinary Terraform variables or outputs.
+The root configuration must declare the `nomatronio/nomatron` provider at `>= 0.6.10, < 0.7` and configure it with an API address and token. The module does not configure a provider. Set secrets through a sensitive root variable and pass them to the module's `value_wo`; do not put secret values in ordinary Terraform variables or outputs.
 
 At least one environment is required. If an application slug is omitted, child resources use the computed application slug and Terraform creates the application first. Setting a stable slug is recommended so dependent resources have predictable identifiers.
 
@@ -160,3 +160,7 @@ terraform import 'module.app_stack.nomatron_variable.this["org_setting"]' 'organ
 ## Testing
 
 Run `terraform fmt -check -recursive`, `terraform init -backend=false`, `terraform validate`, and `terraform test` from the module root. Tests use Terraform's mock Nomatron provider and do not contact a live server. `tflint` can also be run from the module root when installed.
+
+## License
+
+Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE).
